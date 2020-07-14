@@ -1,0 +1,352 @@
+@charset "utf-8";
+/* CSS Document */
+*,*:before,*:after{
+   box-sizing: border-box
+}
+body{
+   padding: 0;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+/* ..........HEADER............. */
+header.nav{
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+   height: 70px
+}
+.nav i{
+   font-size: 30px;
+   color: black;
+   padding: 0 10px;
+}
+.nav a>img{
+  max-width: 180px;
+}
+.icon-menu a{
+   display: flex;
+   align-items: center;
+   padding: 20px
+}
+
+#n3v{
+   width: 50px;
+   height: 50px;
+   border: none;
+   background-color: transparent;
+   position: absolute;
+   top: 15px;
+   right: 6px;
+   z-index: 100000
+}
+
+#n3v:focus{
+   outline: none
+}
+
+#n3v>div{
+   background: black;
+   height: 4px;
+   margin-bottom: 5px;
+}
+
+#n3v .top{
+   margin-top: 5px;
+}
+
+#n3v .middle{
+   transition: opacity 0.3s ease-out
+}
+
+#n3v .top, #n3v .bottom{transition: transform 0.3s ease-out}
+
+
+ body.show-menu #n3v .middle {opacity: 0;}
+
+body.show-menu #n3v .top{
+   transform: translate(0,9px) rotate(45deg);background-color: rgba(0,0,0,0.55)
+}
+
+body.show-menu #n3v .bottom{
+   transform: translate(0,-9px) rotate(-45deg);background-color: rgba(0,0,0,0.55)
+}
+body.show-menu #the-menu,body.show-menu #overlay-page{
+   right: 0
+}
+body.show-menu #n3v{
+   position: fixed;
+   z-index: 99
+}
+#the-menu,#overlay-page{
+   height: 100%;
+   position: fixed;
+   top: 0;
+   transition: right 0.3s ease-out
+}
+#overlay-page{
+   width: 100%;
+   right: -100%;
+   z-index: 97;
+}
+#the-menu{
+   width: 50%;
+   right: -50%;
+   background-color: #FF6010;
+   z-index: 98
+}
+header.nav .button-holder{
+   width: 50px;
+   height: 50px;
+   margin-right: 10px;
+}
+#the-menu ul{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   margin-top: 90px
+}
+.icon-menu img{
+   margin-right: 10px;
+   width: 30px;
+   height: 30px
+}
+
+
+/* ..............BANNER..................... */
+.banner a{display: block}
+.banner img{
+    width: 100%;
+   height: 200px
+}
+
+
+/*............... HEADLINE............... */
+.headline{
+   padding: 20px 0 0;
+   width: 70%;
+   margin: 0 auto
+}
+.headline h2{
+text-align: center;
+color: #FF6010;
+margin: 0
+
+}
+.headline p{text-align: center; 
+    margin: 5px auto 0; line-height: 1.5;font-size: 14px}
+
+
+/* ................PRODUCT.................*/
+.product{
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   padding: 20px 0
+   }
+.product-info a{display: block}
+.product img{
+   width: 100%;
+}
+.product-info h3{
+   font-size: 12px;
+   letter-spacing: 1px;
+   margin: 5px 0;
+   text-align: center;
+   color: #FF6010
+}
+.product-info p{
+   padding: 0;
+   font-size: 12px;
+   line-height: 1.5;
+   margin: 0;
+   text-align: center
+}
+.product-info{
+   width: 45%;
+}
+.product-info:nth-child(3),
+.product-info:nth-child(4){
+   margin-top: 15px
+}
+
+
+/*............. FOOTER............. */
+.ft{
+border-top: 0.5px solid #dbdbdb;
+padding-bottom: 20px
+}
+.ft a{display: block}
+.ft > a > .logo-ft{
+width: 180px;
+margin: 15px auto 0;
+display: block;
+}
+.ft p{
+font-size: 12px;
+margin: 15px 0;
+line-height: 1.7;
+text-align: center;
+color: #414141
+}
+.ft ul{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   margin: 0;
+}
+.ft ul li{
+   list-style: none
+}
+.ft ul a img{
+   width: 60px
+}
+
+
+/*................SLIDE..............*/
+.swiper-button-next,.swiper-button-prev:focus{
+   outline: none;
+}
+.swiper-button-next,.swiper-button-prev{
+   color: #FF6010;
+}
+.swiper-button-prev::after,.swiper-button-next::after{
+   font-size: 25px
+}
+.swiper-pagination-bullet{
+   background: rgba(0,0,0,0.8)
+}
+
+
+/*.......................................................................................................*/
+
+
+
+/*.........TRANG SẢN PHẨM...........*/
+.close{padding: 10px 0 10px 10px}
+.close .space{
+   padding-left: 15px
+  }
+.close >.space:before{
+   content: " / ";
+   position: absolute;
+   left: 0;
+}
+.close div{
+    display: inline-block;
+   position: relative;
+   margin-left: 7px
+}
+.close span{
+   color: #414141;
+   font-size: 12px
+}
+
+
+/*.................HEADLINE 2.............*/
+.headline2{padding: 0px 10px 40px}
+.headline2 h4{
+   border-top: 1px solid #DBDBDB;
+   position: relative;
+   margin: 0;
+   text-transform: uppercase
+}
+.headline2 span{
+   border-top: 2px solid #000;
+   position: absolute;
+   left: 0;
+   letter-spacing: 1px;
+   font-size: 18px;
+   color: #FF6010;
+   font-weight: 500;
+   top: -1px;
+   line-height: 1.5
+}
+
+
+/*.............GALLERY...........*/
+
+.image-product .gallery-thumbs .swiper-wrapper{
+   padding-left: 50px
+}
+.image-product .gallery-thumbs .swiper-wrapper img{
+   border: 1px solid #DBDBDB
+}
+
+/*............COLOR...........*/
+.bose{
+   padding: 10px
+}
+.bose>ul>li{
+   border: 0.5px solid #dbdbdb;
+   background-color: aqua;
+   width: 20px;
+   height: 20px;
+   list-style: none;
+   margin-left: 10px;
+   border-radius: 3px
+}
+.bose>ul{
+   display: flex;
+   margin: 15px 0;
+   padding: 0;
+   font-size: 14px
+}
+.bose>ul>li:nth-child(1){
+   background-color: black
+}
+.bose>ul>li:nth-child(2){
+   background-color: RGB(46, 58, 80)
+}
+.bose>ul>li:nth-child(3){
+   background-color: RGB(235, 101, 76)
+}
+.bose p{font-size: 14px}
+.bose span{
+   margin: 15px 0;
+   font-size: 24px;
+   color: #FF6010;
+}
+.bose .btn-1{
+   display:block;
+   width: 100%;
+   height: 60px;
+   font-size: 24px;
+   background-color: #FF6010;
+   color: #fff;
+   border: none;
+   margin:15px 0 10px;
+   border-radius: 6px
+}
+.bose .btn:focus{
+    outline: none
+}
+.bose .btn-2,.bose .btn-3{
+   width: 48%;
+    height: 50px;
+   font-size: 18px;
+   background-color: RGB(86, 157, 237);
+   color: #fff;
+   border: none;
+   border-radius: 6px;
+}
+.btn-3{margin-left: 10px;}
+.btn-2>i,.btn-3>i{margin-right: 10px;}
+.info-bose{padding: 20px}
+.info-bose >ul{
+   padding: 0;
+}
+
+
+/*..............INFO BOSE............*/
+.info-bose h5{font-size: 18px;margin: 0}
+.info-bose >ul >li{
+   margin-top: 10px;
+   font-size: 12px;
+   list-style: circle;
+   margin-left: 20px;
+   color: #414141
+}
